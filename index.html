@@ -6,6 +6,14 @@
     <!-- icono página -->
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 
+    <!-- fuentes tipográficas  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- css -->
     <link rel="stylesheet" href="/src/style.css" />
     <!-- título página -->
@@ -14,8 +22,33 @@
   <body>
     <div class="container">
       <header>
-        <h1>Buscador de palabras en texto</h1>
+        <h1 class="header-titulo">Buscador de palabras en texto</h1>
       </header>
+      <main>
+        <div class="textoEntrada">
+          <h1 class="textoEntrada-titulo" id="textoEntrada">texto inicial.</h1>
+
+          <input
+            id="inputBuscador"
+            class="textoEntrada-input"
+            type="text"
+            placeholder="Escriba aquí"
+          />
+          <p class="resultado" id="resultadoo">texto a cambiar</p>
+        </div>
+
+        <section class="texto">
+          <p id="texto-parrafo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            alias laboriosam animi quas maiores ducimus. Tempore soluta maxime
+            voluptates error maiores unde nam neque odit vel! Ipsam, sint illo
+            nemo alias expedita dolores, itaque necessitatibus recusandae
+            blanditiis quasi atque doloremque.
+          </p>
+        </section>
+      </main>
+
+      <footer>fin de página</footer>
     </div>
     <!-- script -->
     <script type="module" src="/src/main.js"></script>

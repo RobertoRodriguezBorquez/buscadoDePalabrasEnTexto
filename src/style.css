@@ -1,12 +1,66 @@
 
+
 *{
   padding: 0;
   margin: 0;
 }
-.container{
+.container{ 
+  display: grid;
+  height: 100vh;
 
 }
-
+/* header */
 header{
+  display: flex;
   background-color: bisque;
+  height: 200px;
+ 
+  align-items: center;
+  justify-content: center;
+  
+}
+.header-titulo{
+  font-family: "Dancing Script", serif ;
+  font-size: 30px;
+  
+}
+/* main */
+main{
+  display: flex;
+
+  background-color: cadetblue;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+/* seccion texto inicial y buscador */
+.textoEntrada{
+  height: 300px;
+  background-color: aliceblue;
+  padding: 20px;
+  text-align: center;
+  
+
+  .textoEntrada-titulo{
+    font-size: 25px;
+    margin: 20px 0;
+    
+  }
+  .textoEntrada-input{
+    text-align: center;
+    margin-top: 3rem;
+  }
+}
+/* seccion texto */
+.texto{
+  height: auto;
+  background-color: bisque;
+  margin: 20px 0;
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+/* footer */
+footer{
+  background-color: rgb(221, 188, 23);
 }
