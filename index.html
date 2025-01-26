@@ -13,43 +13,93 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
       rel="stylesheet"
     />
-
+    <!-- iconos footer-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <!-- css -->
     <link rel="stylesheet" href="/src/style.css" />
     <!-- título página -->
     <title>Buscador de palabras</title>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1 class="header-titulo">Buscador de palabras en texto</h1>
-      </header>
-      <main>
-        <div class="textoEntrada">
-          <h1 class="textoEntrada-titulo" id="textoEntrada">texto inicial.</h1>
+    <div class="disenoKindle">
+      <div class="container">
+        <header>
+          <h1 class="header-titulo">Buscador de palabras en texto</h1>
+        </header>
+        <main>
+          <div class="textoEntrada">
+            <h1 class="textoEntrada-titulo" id="textoEntrada">
+              texto inicial.
+            </h1>
 
-          <input
-            id="inputBuscador"
-            class="textoEntrada-input"
-            type="text"
-            placeholder="Escriba aquí"
-          />
-          <p class="resultado" id="resultadoo">texto a cambiar</p>
+            <input
+              id="inputBuscador"
+              class="textoEntrada-input"
+              type="text"
+              placeholder="Escriba aquí"
+            />
+            <p class="resultado" id="resultadoo">texto a cambiar</p>
+          </div>
+
+          <section class="texto">
+            <p id="texto-parrafo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis alias laboriosam animi quas maiores ducimus. Tempore
+              soluta maxime voluptates error maiores unde nam neque odit vel!
+              Ipsam, sint illo nemo alias expedita dolores, itaque
+              necessitatibus recusandae blanditiis quasi atque doloremque.
+            </p>
+          </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <span class="footer-text">
+            Roberto Rodríguez Bz. All Rights Reserved. © 2024
+          </span>
+
+          <ul class="footer-nav">
+            <li>
+              <a
+                href="mailto:obertorodriguezbqz@gmail.com"
+                class="footer-nav-item"
+                title="Correo Electrónico"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/RobertoRodriguezBorquez"
+                class="footer-nav-item"
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://robertorodriguezportaweb.netlify.app/"
+                class="footer-nav-item"
+                title="Portafolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-laptop-code"></i
+              ></a>
+            </li>
+          </ul>
+        </footer>
+        <div class="container-kindle">
+          <p class="kindle">KINDLE</p>
         </div>
-
-        <section class="texto">
-          <p id="texto-parrafo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-            alias laboriosam animi quas maiores ducimus. Tempore soluta maxime
-            voluptates error maiores unde nam neque odit vel! Ipsam, sint illo
-            nemo alias expedita dolores, itaque necessitatibus recusandae
-            blanditiis quasi atque doloremque.
-          </p>
-        </section>
-      </main>
-
-      <footer>fin de página</footer>
+      </div>
     </div>
+
     <!-- script -->
     <script type="module" src="/src/main.js"></script>
   </body>

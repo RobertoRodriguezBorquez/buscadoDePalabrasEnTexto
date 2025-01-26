@@ -2,7 +2,7 @@
 const textEntrada = document.getElementById("textoEntrada");
 //actalizamos texto
 textEntrada.innerText =
-  "Bienvenido, porfavor introduzca la palabra a buscar en el siguiente en el siguiente texto";
+  "Introduzca la palabra a buscar en el siguiente buscador";
 
 /* Capturar buscador */
 const buscador = document.getElementById("inputBuscador");
