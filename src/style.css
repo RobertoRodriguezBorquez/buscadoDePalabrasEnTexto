@@ -1,43 +1,38 @@
 * {
   padding: 0;
   margin: 0;
-  
 }
 
-
 body {
-  background-color: #ffffff;
-  
+  background-color: #e2e0f9;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2rem;
   min-height: 100vh;
-  
 }
 
 /* Diseño estilo Kindle */
 .disenoKindle {
-  background-color: #333333; 
- 
+  background-color: #333333;
+
   width: 60%;
-  max-width: 800px; 
-  min-width: 320px; 
-  padding: 2.5em; 
+  max-width: 800px;
+  min-width: 320px;
+  padding: 2.5em;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
- 
 }
-
 
 .container {
   display: grid;
   min-height: 100vh;
- 
+
   grid-template-areas:
     "header"
     "main"
@@ -47,34 +42,52 @@ body {
 header {
   grid-area: header;
   display: flex;
-  background-color: bisque;
+  background-color: #fef7ff;
 
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  padding: 0 1em;
 }
-.header-titulo {
+
+.header-titulo , 
+.header-batery{
   font-family: "Dancing Script", serif;
-  font-size: 30px;
+  font-size: 20px;
+ 
 }
+
+.header-batery {
+  margin-left: auto; /* Empuja los elementos hacia la derecha */
+  margin-right: 10px;
+}
+
+.material-symbols-outlined {
+  font-size: 30px;
+ 
+}
+
 /* main */
 main {
   grid-area: main;
   display: flex;
 
-  background-color: rgb(252, 252, 252);
+  background-color:#e2e0f9;
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+ 
 }
 /* seccion texto inicial y buscador */
 .textoEntrada {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: aliceblue;
+  background-color: #fef7ff;
   padding: 50px;
   text-align: center;
   flex: 1;
+  border-radius: 1em;
 
   .textoEntrada-titulo {
     font-size: 25px;
@@ -93,10 +106,10 @@ main {
 .texto {
   flex: 1;
   height: auto;
-  background-color: bisque;
+  background-color: #fef7ff;
   margin: 20px 0;
   padding: 4rem;
-  border-radius: 5px;
+  border-radius: 1em;
   align-content: center;
 }
 
@@ -110,7 +123,7 @@ main {
   left: 0;
   width: auto;
   padding: 1rem 2rem;
-  background-color: #ffffff;
+  background-color: #fef7ff;
   border-top: 1px solid #e5e7eb;
   box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
   z-index: 20;
@@ -160,7 +173,7 @@ main {
 
 .footer-nav-item {
   font-size: 1.5rem;
-  color: rgb(254, 207, 151);
+  color:#e2e0f9;
   margin: 0 1rem;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -171,25 +184,22 @@ main {
 }
 
 /* CONTAINER-KINDLE */
-.container-kindle{
-  height:auto;
+.container-kindle {
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .kindle {
-  
-  font-size: 2.5rem; 
-  color: #5f5f5f; 
+  font-size: 2.5rem;
+  color: #5f5f5f;
   font-family: Arial, sans-serif;
-  
 }
 /* Ajustes responsivos para pantallas pequeñas */
 @media (max-width: 768px) {
   .disenoKindle {
     width: 90%;
-   
   }
 
   .kindle {
@@ -210,10 +220,7 @@ main {
 }
 /* Para pantallas medianas en adelante */
 @media (min-width: 768px) {
-  body {
-    background-color: #ffffff;
-   
-  }
+
 
   .disenoKindle {
     width: 90%;
