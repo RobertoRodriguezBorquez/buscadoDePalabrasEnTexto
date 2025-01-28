@@ -32,6 +32,7 @@ body {
 .container {
   display: grid;
   min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 
   grid-template-areas:
     "header"
@@ -50,11 +51,10 @@ header {
   padding: 0 1em;
 }
 
-.header-titulo , 
-.header-batery{
+.header-titulo,
+.header-batery {
   font-family: "Dancing Script", serif;
   font-size: 20px;
- 
 }
 
 .header-batery {
@@ -64,53 +64,85 @@ header {
 
 .material-symbols-outlined {
   font-size: 30px;
- 
 }
 
 /* main */
 main {
   grid-area: main;
-  display: flex;
-
-  background-color:#e2e0f9;
-  flex-direction: column;
-  justify-content: center;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "busqueda"
+    "parrafo";
+  grid-template-rows: 30% 70%;
+  background-color: #e2e0f9;
   padding: 20px;
- 
+  gap: 20px;
 }
+
 /* seccion texto inicial y buscador */
 .textoEntrada {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  padding: 2em;
   background-color: #fef7ff;
-  padding: 50px;
-  text-align: center;
-  flex: 1;
+  justify-content: center;
+  align-items: center;
+  grid-area: busqueda;
   border-radius: 1em;
-
-  .textoEntrada-titulo {
-    font-size: 25px;
-  }
-  .textoEntrada-input {
-    text-align: center;
-  }
-  .resultado {
-    flex: 1;
-
-    font-size: 20px;
-    text-align: center;
-  }
 }
+
+.textoEntrada-titulo {
+  font-size: 25px;
+}
+
+.textoEntrada-input {
+  text-align: center;
+  width: 40%;
+}
+
+.btn-text {
+  padding: 10px 20px;
+  background-color: #e2e0f9;
+  color: #fef7ff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-text:hover {
+  background-color: #dfcaea;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
 /* seccion texto */
 .texto {
-  flex: 1;
-  height: auto;
+  grid-area: parrafo;
   background-color: #fef7ff;
-  margin: 20px 0;
-  padding: 4rem;
+
+  padding: 20px;
   border-radius: 1em;
-  align-content: center;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  justify-content: center;
+}
+
+.texto-title {
+  font-style: oblique;
+}
+
+.texto-parrafo {
+  font-size: 1rem;
+  line-height: 1.2;
+  word-wrap: break-word; /* Permite romper palabras largas */
 }
 
 /* footer */
@@ -140,7 +172,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-size: 17px;
   color: #333333;
   margin: 0;
 }
@@ -173,7 +205,7 @@ main {
 
 .footer-nav-item {
   font-size: 1.5rem;
-  color:#e2e0f9;
+  color: #e2e0f9;
   margin: 0 1rem;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -220,15 +252,68 @@ main {
 }
 /* Para pantallas medianas en adelante */
 @media (min-width: 768px) {
-
-
   .disenoKindle {
-    width: 90%;
+    width: 70%;
     padding: 2em;
   }
 
   .kindle {
     font-size: 1.8rem;
+    padding: 1em;
+  }
+  /* seccion texto inicial y buscador */
+  .textoEntrada {
+    display: flex;
+    flex-direction: row;
+
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+    box-sizing: border-box;
+    height: 100%; /* Asegura que ocupe toda la altura disponible */
+  }
+
+  .textoEntrada-titulo,
+  .textoEntrada-input,
+  .btn-text {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 60%; 
+
+    height: 50px; 
+    text-align: center; 
+  }
+
+  .textoEntrada-titulo {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .textoEntrada-input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .btn-text {
+    background-color: #e2e0f9;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-text:hover {
+    background-color: #ccc;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
   }
 
   .footer {
